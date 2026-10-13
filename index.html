@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Himaja M | Senior Data Engineer</title>
+<meta name="description" content="Himaja M, Senior Data Engineer building trusted data platforms for healthcare, banking and e-commerce.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#0D1620;--panel:#142130;--line:#233447;
+  --text:#EAF0F5;--mid:#A9B8C6;--dim:#7C8D9E;
+  --bronze:#D08C5B;--silver:#BFCAD5;--gold:#E8BC4E;
+  --display:'Bricolage Grotesque',Georgia,serif;
+  --body:'IBM Plex Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme="dark"]){
+    color-scheme:light;
+    --bg:#F5F3EE;--panel:#FFFFFF;--line:#DAD6CC;
+    --text:#14202C;--mid:#44566A;--dim:#657689;
+    --bronze:#9A5A2B;--silver:#5E6E7E;--gold:#8A6700;
+  }
+}
+:root[data-theme="dark"]{color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.65;font-size:16px;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
+.brand{font-family:var(--display);font-weight:700;font-size:18px;text-decoration:none}
+nav{display:flex;gap:26px;font-size:14px;color:var(--mid)}
+nav a{text-decoration:none}nav a:hover{color:var(--text)}
+@media(max-width:620px){nav a:nth-child(n+3){display:none}nav{gap:18px}}
+
+/* hero */
+.hero{padding:88px 0 72px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(40px,7vw,76px);line-height:1.02;letter-spacing:-.025em;max-width:860px}
+.lede{margin-top:26px;max-width:600px;font-size:19px;color:var(--mid)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{display:inline-block;padding:12px 22px;border-radius:4px;border:1px solid var(--line);text-decoration:none;font-weight:500;font-size:15px}
+.btn.main{background:var(--gold);border-color:var(--gold);color:#1A1405}
+.btn:hover{border-color:var(--silver)}
+.btn.main:hover{filter:brightness(1.08)}
+
+/* lineage: the one memorable element */
+.lineage{margin-top:68px;position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+.lineage::before{content:"";position:absolute;left:10%;right:10%;top:13px;height:2px;background:var(--line)}
+.lineage::after{content:"";position:absolute;left:10%;top:10px;width:8px;height:8px;border-radius:50%;background:var(--gold);animation:flow 5s ease-in-out 1 forwards}
+@keyframes flow{to{left:calc(90% - 8px)}}
+@media(prefers-reduced-motion:reduce){.lineage::after{animation:none;left:calc(90% - 8px)}html{scroll-behavior:auto}}
+.node{position:relative;text-align:center;padding:0 6px}
+.node i{display:block;width:28px;height:28px;border-radius:50%;margin:0 auto 14px;background:var(--bg);border:2px solid var(--c);position:relative;z-index:1}
+.node b{display:block;font-family:var(--display);font-size:17px;color:var(--c)}
+.node span{display:block;font-size:13px;color:var(--dim);margin-top:2px;line-height:1.45}
+.n0{--c:var(--dim)}.n1{--c:var(--bronze)}.n2{--c:var(--silver)}.n3{--c:var(--gold)}.n4{--c:var(--text)}
+@media(max-width:620px){
+  .lineage{grid-template-columns:1fr;gap:22px}
+  .lineage::before,.lineage::after{display:none}
+  .node{text-align:left;display:grid;grid-template-columns:40px 1fr;align-items:center}
+  .node i{margin:0;grid-row:span 2}
+}
+
+/* sections */
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--display);font-size:32px;line-height:1.15;letter-spacing:-.015em;margin-bottom:36px}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:56px}
+@media(max-width:800px){.about{grid-template-columns:1fr;gap:36px}}
+.about p{color:var(--mid);margin-bottom:16px;max-width:60ch}
+.about p b{color:var(--text);font-weight:500}
+.facts{list-style:none;border-top:1px solid var(--line)}
+.facts li{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);color:var(--mid);font-size:14px}
+.facts strong{font-family:var(--display);font-size:26px;color:var(--gold);font-weight:700;white-space:nowrap}
+
+.job{display:grid;grid-template-columns:170px 1fr;gap:32px;padding:34px 0;border-bottom:1px solid var(--line)}
+.job:last-child{border-bottom:0}
+@media(max-width:700px){.job{grid-template-columns:1fr;gap:6px}}
+.when{font-family:var(--mono);font-size:13px;color:var(--dim);padding-top:5px}
+.job h3{font-family:var(--display);font-size:22px;font-weight:700}
+.job h3 span{color:var(--bronze)}
+.where{font-size:14px;color:var(--dim);margin:2px 0 16px}
+.job ul{list-style:none;display:grid;gap:11px;max-width:70ch}
+.job li{position:relative;padding-left:20px;color:var(--mid);font-size:15px}
+.job li::before{content:"";position:absolute;left:0;top:.68em;width:8px;height:2px;background:var(--bronze)}
+.job li b{color:var(--text);font-weight:500}
+
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:0 56px}
+@media(max-width:800px){.skills{grid-template-columns:1fr}}
+.skills div{padding:18px 0;border-top:1px solid var(--line)}
+.skills h3{font-family:var(--display);font-size:17px;color:var(--silver);margin-bottom:4px}
+.skills p{color:var(--mid);font-size:14.5px}
+
+.edu{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.edu h3{font-family:var(--display);font-size:21px}
+.edu p{color:var(--mid)}
+.edu .when{padding-top:6px}
+
+.contact{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:48px 36px}
+.contact h2{margin-bottom:12px}
+.contact p{color:var(--mid);max-width:52ch}
+footer{padding:28px 0 40px;border-top:1px solid var(--line);color:var(--dim);font-size:13px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">Himaja M</a>
+    <nav>
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <h1>I turn raw healthcare, banking and retail data into data people trust.</h1>
+    <p class="lede">Himaja M, Senior Data Engineer. Six years building ETL/ELT pipelines and cloud data platforms on GCP, Azure and AWS.</p>
+    <div class="actions">
+      <a class="btn main" href="mailto:Himajar3105@gmail.com">Email me</a>
+      <a class="btn" href="#experience">See my work</a>
+    </div>
+
+    <div class="lineage" aria-label="Data flow from sources to dashboards">
+      <div class="node n0"><i></i><b>Sources</b><span>EHR, claims, orders, payments</span></div>
+      <div class="node n1"><i></i><b>Bronze</b><span>Raw data lands as-is</span></div>
+      <div class="node n2"><i></i><b>Silver</b><span>Cleaned, 50M+ records a day</span></div>
+      <div class="node n3"><i></i><b>Gold</b><span>Business-ready datasets</span></div>
+      <div class="node n4"><i></i><b>Dashboards</b><span>350+ in Tableau</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <h2>About</h2>
+      <p>I'm a data engineer who cares about <b>pipelines that stay up and numbers that stay right</b>. My work spans Python, PySpark, SQL, dbt and Airflow, on BigQuery, Snowflake, Databricks and Redshift.</p>
+      <p>At Banner Health I built the Silver layer of a medallion architecture in BigQuery, and moved legacy Alteryx workflows to dbt with <b>no production downtime</b>.</p>
+      <p>I also build with data governance and GenAI in mind: HIPAA-compliant masking, quality checks, lineage, and Vertex AI to automate validation.</p>
+    </div>
+    <ul class="facts">
+      <li>Years in data engineering<strong>6</strong></li>
+      <li>Records processed daily at Banner Health<strong>50M+</strong></li>
+      <li>Licensing cost cut by moving Alteryx to dbt<strong>50%</strong></li>
+      <li>Daily data at RBL Bank<strong>5 TB</strong></li>
+      <li>Pipeline reliability at Flipkart<strong>99.9%</strong></li>
+    </ul>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="when">Sep 2025 to present</div>
+      <div>
+        <h3>Data Engineer, <span>Banner Health</span></h3>
+        <div class="where">Remote</div>
+        <ul>
+          <li>Built the Silver layer in BigQuery with incremental dbt pipelines, integrating EHR, claims, patient, provider and clinical data at <b>50M+ records a day</b>.</li>
+          <li>Migrated legacy Alteryx workflows to dbt Core/Cloud, <b>cutting licensing costs 50%</b> with zero downtime.</li>
+          <li>Delivered models behind <b>350+ Tableau dashboards</b> for clinical, financial and operational reporting.</li>
+          <li>Built dbt tests, lineage and observability, lifting SLA compliance to <b>99%</b> and cutting production failures 40%.</li>
+          <li>Implemented HIPAA-compliant PHI/PII masking, column-level security and IAM controls in BigQuery.</li>
+          <li>Built serverless ingestion with Cloud Functions, Cloud Run, Pub/Sub and Dataflow, and used Vertex AI to automate summarization and metadata generation, <b>reducing manual validation 30%</b>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">May 2021 to Nov 2023</div>
+      <div>
+        <h3>Data Engineer, <span>Flipkart</span></h3>
+        <div class="where">Hyderabad, India</div>
+        <ul>
+          <li>Built ETL/ELT pipelines in PySpark, Azure Databricks and Snowflake for <b>2+ TB of daily e-commerce data</b>, improving processing efficiency 25%.</li>
+          <li>Ran <b>50+ pipelines</b> in Azure Data Factory, Databricks and Python across 50+ systems at 99.9% reliability.</li>
+          <li>Modeled Snowflake star schemas with SCD Type 2 for sales, inventory and pricing analytics.</li>
+          <li>Orchestrated 25+ daily Airflow jobs, and built reconciliation checks that <b>cut data inconsistencies 40%</b>.</li>
+          <li>Applied PII masking and role-based access control inside Snowflake pipelines.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">Jun 2019 to Apr 2021</div>
+      <div>
+        <h3>Data Engineer, <span>RBL Bank</span></h3>
+        <div class="where">Hyderabad, India</div>
+        <ul>
+          <li>Built Spark and Hive pipelines on AWS EMR for <b>5 TB of daily banking data</b>, improving efficiency 45%.</li>
+          <li>Built an enterprise data lake on S3, Hive and EMR, with <b>99.5% data availability</b>.</li>
+          <li>Developed AWS Glue jobs loading Amazon Redshift, <b>cutting batch time 35%</b>.</li>
+          <li>Delivered data for AML, KYC, fraud and regulatory reporting, with <b>98% on-time delivery</b>.</li>
+          <li>Tuned SQL, Spark and partitioning to reduce cloud resource use by 25%.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><h3>Languages</h3><p>Python, SQL, PySpark, Scala, Java, C++</p></div>
+      <div><h3>Cloud</h3><p>GCP (BigQuery, Dataflow, Dataproc, Pub/Sub), Azure (Data Factory, Databricks, Synapse), AWS (Glue, EMR, Redshift, Lambda, S3)</p></div>
+      <div><h3>Pipelines and streaming</h3><p>ETL/ELT, CDC, Spark Structured Streaming, Kafka, Apache Beam, dbt, Airflow</p></div>
+      <div><h3>Warehouses and lakehouse</h3><p>Snowflake, BigQuery, Redshift, Delta Lake, Apache Iceberg, dimensional modeling</p></div>
+      <div><h3>Quality and governance</h3><p>Great Expectations, data lineage, observability, profiling, metadata management</p></div>
+      <div><h3>DevOps</h3><p>Git, GitHub, Jenkins, CI/CD, infrastructure as code, Kubernetes (GKE)</p></div>
+      <div><h3>GenAI and ML</h3><p>Vertex AI, OpenAI APIs, RAG, LLMs, vector embeddings, TensorFlow</p></div>
+      <div><h3>Databases and BI</h3><p>PostgreSQL, MySQL, MongoDB, Aurora, Tableau, Power BI</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2>Education</h2>
+    <div class="edu">
+      <div>
+        <h3>Master's in Computer and Information Science</h3>
+        <p>Southern Arkansas University</p>
+      </div>
+      <div class="when">July 2025</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Let's talk</h2>
+      <p>I'm open to senior data engineering roles. Email is the quickest way to reach me.</p>
+      <div class="actions">
+        <a class="btn main" href="mailto:Himajar3105@gmail.com">Himajar3105@gmail.com</a>
+        <a class="btn" href="tel:+14693197764">+1 (469) 319-7764</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Himaja M, Senior Data Engineer</div></footer>
+</body>
+</html>
